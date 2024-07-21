@@ -1,0 +1,66 @@
+#waybar { 
+  background-color: rgba(255, 255, 255, 0); 
+  color: #e5e3e3; 
+}
+
+
+* {
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; 
+  font-size: 16px; 
+   }
+
+#image,
+#workspaces{
+   background-color: rgba(13, 12, 12, 0.75); 
+   color: #e5e3e3; 
+   border: 4px double rgba(54, 53, 53, 0.75);
+   margin-right: 4px;
+   margin-left: 4px;
+   padding-right: 2px;
+   padding-left: 2px;
+   border-radius: 2px;
+    
+}
+
+/*Для всех кнопок*/
+#workspaces button{ 
+   margin-right: 3px;
+   margin-left: 3px;
+   }
+/*Для активного рабочего стола*/
+#workspaces button.active{
+   color:  rgba(54, 53, 53, 0.75);
+}
+
+
+#tray,
+#language{
+   background-color: rgba(13, 12, 12, 0.75); 
+   color: #e5e3e3; 
+   border: 4px double rgba(54, 53, 53, 0.75);
+   margin-right: 4px;
+   margin-left: 4px;
+   padding-right: 10px;
+   padding-left: 10px;
+   border-radius: 2px;
+   }
+
+#clock,
+#pulseaudio,
+#network,
+#battery{
+   background-color: rgba(13, 12, 12, 0.75); 
+   color: #e5e3e3; 
+   border: 4px double rgba(54, 53, 53, 0.75);
+   margin-right: 4px;
+   margin-left: 4px;
+   padding-right: 7px;
+   padding-left: 7px;
+   border-radius: 2px;
+   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+   }
+
+
+
+

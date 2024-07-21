@@ -1,0 +1,90 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar at the bottom of your screen
+  "height": 34, // Waybar height
+  "width": 1900, // Waybar width
+  "modules-left": ["image#album-art", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "hyprland/language","pulseaudio", "network", "battery"],
+  
+    "image#album-art": {
+        "path": "/home/vanyok/Pictures/waybarpic1.png",
+        "size": 28,
+        "interval": 5,
+        "on-click": "systemctl start bluetooth.service"
+    },
+
+  "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": false,
+      "format": "{icon}",
+      "format-icons": {
+          "1:default": "",
+          "2:default": "",
+          "3:default": "",
+          "4:default": "",
+          "5:default": "",
+          "6:default": "",
+          "7:default": "",
+          "8:default": ""
+      },
+      "persistent-workspaces": {
+          "*": 5 //Пять рабочих столов по дефолту 
+       }
+  },
+
+  "clock": {
+	"interval": 1,
+	"tooltip": true,
+	"format": "{:%T | %d %B %Y}"
+    },
+  
+  "battery": {
+      "bat": "BAT0",
+      "states": {
+          // "good": 95,
+          "warning": 30,
+          "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      // "format-good": "", // An empty format will hide the module
+      // "format-full": "",
+      "format-icons": ["", "", "", "", ""]
+  },
+
+  "network": {
+      // "interface": "wlp2s0", // (Optional) To force the use of this interface
+      "format-wifi": "{essid} ({signalStrength}%) ",
+      "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+      "format-disconnected": "Disconnected ⚠",
+      "on-click": "iwgtk"
+  },
+
+  "pulseaudio": {
+      //"scroll-step": 1,
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-muted": "",
+      "format-icons": {
+          "headphones": "",
+          "handsfree": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["", ""]
+      },
+      "on-click": "pavucontrol"
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    "format-en": "English"
+    },
+
+  "tray": {
+      "icon-size": 24,
+      "spacing": 10
+  }
+}

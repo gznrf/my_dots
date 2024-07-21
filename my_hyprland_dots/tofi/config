@@ -1,0 +1,26 @@
+#colors
+background-color = #0d0c0cf4 
+selection-color = #636161
+text-color = #e5e3e3 
+border-color = #363535f4
+
+#Window 
+width = 40%
+height = 35%
+anchor=position
+border-size = 2
+blurls = launcher
+corner-radius = 10
+selection-background-corner-radius = 10
+
+#fonts
+font = JetBrainsMono Nerd Font
+font-size = 24
+
+#other
+prompt-text = ">  "
+placeholder-text = 
+
+
+
+
